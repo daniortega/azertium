@@ -1,0 +1,10 @@
+  <p>Total de comentarios: <strong>{{ total }}</strong></p>
+  <br>
+  <ul>
+  {% for key,value in last_five_comments %}
+    <li>Comentario: <strong>{{ value.comment }}</strong> - Titulo del nodo: <strong>{{ value.title }}</strong> </li>
+  {% endfor%}
+  </ul>
+  <br>
+   Total de palabras de todos los comentarios del usuario:<strong>{{ total_words}}</strong><br>
+

@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for azertium module.
+ */
+/**
+ * Implements hook_theme().
+ */
+function azertium_theme() {
+    return [
+      'azertium_block' => [
+        'variables' => [
+          'total' => '',
+          'last_five_comments' => 'sadasdas',
+          'total_words' => '',
+        ],
+      ],
+    ];
+  }

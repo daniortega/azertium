@@ -1,0 +1,5 @@
+name: 'azertium'
+type: module
+description: 'User block with info aboute their comments'
+package: Custom
+core_version_requirement: ^10 || ^11

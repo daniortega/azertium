@@ -1,0 +1,20 @@
+uuid: ec00fe76-6194-407f-87a2-c8f5664e5cea
+langcode: es
+status: true
+dependencies:
+  module:
+    - azertium
+  theme:
+    - olivero
+id: olivero_showuserinfo
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: azertium_show_user_info
+settings:
+  id: azertium_show_user_info
+  label: 'Show User Info'
+  label_display: visible
+  provider: azertium
+visibility: {  }
