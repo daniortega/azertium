@@ -73,6 +73,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
   */
 
   public function getTotalWords($uid){
+      $totalWords = 0;
       $query = $this->connection->select('comment_field_data', 'cfd');
       $query->join('comment__comment_body', 'ccb', 'cfd.cid = ccb.entity_id');
       $query->fields('ccb',['comment_body_value'])
@@ -91,7 +92,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
   */
 
   public function getLastFiveComments($uid){
-
+    $lastComments = 0;
     $query = $this->connection->select('comment_field_data', 'cfd');
     $query->join('node_field_data', 'nfd', 'cfd.entity_id = nfd.nid');
     $query->fields('cfd',['subject'])
@@ -111,7 +112,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
   * {@inheritdoc}
   */
   public function getTotalComments($uid){
-
+    $number = 0;
     $number = $this->connection->select('comment_field_data', 'cfd')
     ->condition('uid', $uid)
     ->countQuery()
